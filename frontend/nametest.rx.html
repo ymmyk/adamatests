@@ -1,0 +1,20 @@
+<forest>
+    <page uri="/nametest">
+        <connection use-domain name="product">
+            <h1>nametest</h1>
+            <div rx:iterate="names" rx:expand-view-state>
+                <div rx:load="set:showHidden=false">
+                    <button rx:click="toggle:showHidden" class="px-6 py-3 rounded-lg text-white font-medium text-sm bg-primary-royal-sapphire-100 hover:bg-primary-royal-sapphire-90">Toggle</button>
+                    <div rx:if="view:showHidden">
+                        This should be hidden - <lookup path="name" />
+                    </div>
+                </div>
+            </div>
+        </connection>
+
+        <div>// Save the viewstate to localstorage</div>
+        <pre>
+            <div>let vs = RxHTML.getConnectionByName('product').viewstatetree.raw();console.log(vs);localStorage.setItem('rxviewstate', JSON.stringify(vs))</div>
+        </pre>
+    </page>
+</forest>

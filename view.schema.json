@@ -1,0 +1,17 @@
+{
+  "/nametest" : {
+    "names" : {
+      "#items" : {
+        "showHidden" : "bool"
+      }
+    }
+  },
+  "/" : { },
+  "/product" : { },
+  "/register" : {
+    "errormessage" : "error-message",
+    "failed" : "bool"
+  },
+  "/sign-in" : { },
+  "/forgot" : { }
+}
